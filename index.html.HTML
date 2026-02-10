@@ -3,98 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Наука у тренді</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-            color: #222;
-            line-height: 1.6;
-        }
-
-        header {
-            border: 3px solid black;
-            margin: 20px;
-            padding: 25px;
-            text-align: center;
-            background-color: white;
-            box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
-        }
-
-        header h1 {
-            font-size: 36px;
-            letter-spacing: 2px;
-        }
-
-        header p {
-            font-size: 20px;
-            color: #444;
-        }
-
-        main {
-            display: flex;
-            gap: 25px;
-            margin: 20px;
-            align-items: stretch;
-        }
-
-        .left { width: 25%; display: flex; flex-direction: column; gap: 20px; }
-        .center { width: 50%; border: 3px solid black; background-color: white; padding: 25px; text-align: center; }
-        .sidebar-right { width: 25%; display: flex; flex-direction: column; gap: 20px; }
-
-        .block {
-            background-color: white;
-            border: 3px solid black;
-            padding: 25px;
-            text-align: left;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .block:hover {
-            transform: translateY(-5px);
-            box-shadow: 8px 8px 0px black;
-        }
-
-        .block h2, .block h3 {
-            font-size: 24px;
-            margin-bottom: 12px;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 5px;
-        }
-
-        .block p, .block div {
-            font-size: 18px;
-        }
-
-        .big { min-height: 280px; }
-        .small { min-height: 180px; }
-
-        .center img {
-            max-width: 100%;
-            border: 2px solid #000;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-
-        footer {
-            border: 3px solid black;
-            margin: 20px;
-            padding: 20px;
-            background-color: white;
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -105,7 +14,7 @@
 
 <main>
     <div class="left">
-        <div class="block big">
+        <div class="block big fade-in">
             <h2>Тренди науки</h2>
             <div>
                 🔹 Штучний інтелект<br>
@@ -115,38 +24,48 @@
             </div>
         </div>
 
-        <div class="block small">
+        <div class="block small fade-in">
             <h3>Цікавий факт</h3>
             <p>Перший комп’ютер займав цілу кімнату, а зараз він у твоїй кишені 📱</p>
         </div>
     </div>
 
-    <div class="center">
+    <div class="center fade-in">
         <h2>Наука в дії</h2>
         <img src="https://freelancehunt.com/blog/content/images/size/w2000/2025/02/-------------------------2.jpg" alt="Наука">
+
+        <p class="counter-title">Кількість відвідувань сайту:</p>
+        <span class="num" id="visitCount">0</span>
+
+        <div class="ai-box fade-in">
+            <h3>🤖 Порада від ШІ</h3>
+            <p id="aiText">Натисни кнопку, щоб отримати пораду</p>
+            <button id="aiBtn">Отримати пораду</button>
+        </div>
     </div>
 
     <div class="sidebar-right">
-        <div class="block">
+        <div class="block fade-in">
             <h2>Навіщо це?</h2>
-            <p>Наука допомагає створювати технології, лікувати хвороби та покращувати життя.</p>
+            <p>Наука допомагає створювати технології та покращувати життя.</p>
         </div>
 
-        <div class="block">
+        <div class="block fade-in">
             <h2>Майбутнє</h2>
-            <p>Бути в курсі досягнень сьогодні — означає бути готовим до світу завтра.</p>
+            <p>Бути в курсі досягнень — бути готовим до завтра.</p>
         </div>
 
-        <div class="block">
+        <div class="block fade-in">
             <h2>Еко-технології</h2>
-            <p>Зелена енергія та переробка пластику рятують нашу планету вже зараз 🌿</p>
+            <p>Зелена енергія рятує планету 🌿</p>
         </div>
     </div>
 </main>
 
 <footer>
-    💡 Наука — це двигун прогресу, що створює наше спільне майбутнє.
+    💡 Наука — це двигун прогресу.
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
